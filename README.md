@@ -44,7 +44,7 @@ The election commission has requested additional data to complete the audit.
 
 
 ## Challenge Summary 
-This script can be used for future elections to determine any number of votes, counties, percentages, and candidates as long as adherence to the format of [election_results.csv](./Resources/election_results.csv) is followed. This script can be modified for future election result csv files containing no header by removing line 43. This script can further be modified for csv result files with candidates and counties being listed differently by simply changing each location within the list starting at 0 on lines 52 and 55.
+This script can be used for future elections to determine any number of votes, counties, percentages, and candidates as long as adherence to the format of [election_results.csv](./Resources/election_results.csv) is followed. This script can be modified for future election result csv files containing no header by removing line 43. This script can further be modified for csv result files with candidates and counties being listed in different columns by simply changing lines 52 and 55 to the appropriate #, column 1 being "0", column 2 being "1" and so on. 
 
 [See Full Code Here](./Py.Poll_Challenge.py)
 
