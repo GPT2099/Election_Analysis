@@ -44,6 +44,7 @@ The election commission has requested additional data to complete the audit.
 
 
 ## Challenge Summary 
+This script can be used for future elections to determine any number of votes, counties, percentages, and candidates as long as adherence to the format of [election_results.csv] is followed. This script can be modified if future election result csv files contain no header by removing line 43.  
 
 
 - 
