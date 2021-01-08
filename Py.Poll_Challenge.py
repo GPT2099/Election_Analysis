@@ -20,7 +20,7 @@ candidate_votes = {}
 
 # 1: Create a county list and county votes dictionary.
 county_options = []
-county_votes = {}
+county_dict = {}
 
 # Track the winning candidate, vote count and percentage
 winning_candidate = ""
@@ -78,11 +78,11 @@ with open(file_to_load) as election_data:
 
 
             # 4c: Begin tracking the county's vote count.
-            county_votes[county_name] = 0
+            county_dict[county_name] = 0
 
 
         # 5: Add a vote to that county's vote count.
-        county_votes[county_name] += 1
+        county_dict[county_name] += 1
 
 
 
@@ -101,23 +101,44 @@ with open(file_to_save, "w") as txt_file:
     txt_file.write(election_results)
 
     # 6a: Write a for loop to get the county from the county dictionary.
+    for county_name in county_dict:
 
         # 6b: Retrieve the county vote count.
+        county_votes = county_dict.get(county_name)
+
 
         # 6c: Calculate the percentage of votes for the county.
+        county_vote_percentage = float(county_votes) / float(total_votes) * 100
+        county_results = (
+            f"{county_name}: {county_vote_percentage:.1f}% ({county_votes:,})\n")
 
 
          # 6d: Print the county results to the terminal.
+        print(county_results)
+
 
          # 6e: Save the county votes to a text file.
+        txt_file.write(county_results)
 
          # 6f: Write an if statement to determine the winning county and get its vote count.
+        if (county_votes > winning_county_votes):
+            winning_county_votes = county_votes
+            winning_county = county_name
+
+            
+         
 
 
     # 7: Print the county with the largest turnout to the terminal.
+    winning_county_summary = (
+        f"-------------------------\n"
+        f"Largest County Turnout: {winning_county}\n"
+        f"-------------------------\n")
+    print(winning_county_summary)
 
 
     # 8: Save the county with the largest turnout to a text file.
+    txt_file.write(winning_county_summary)
 
 
     # Save the final candidate vote count to the text file.
