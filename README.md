@@ -16,7 +16,12 @@ congressional election.
 
 ## Summary
 The Analysis of the election show that:
+
 - There were 369,711 votes cast in the election. 
+- Jefferson County received 10.5% of the vote and 38,855 number of votes.
+- Denver County received 82.8% of the vote and 306,055 number of votes.
+- Arapahoe County received 6.7% of the vote and 24,801 number of votes.
+- Denver County recieved the greatest turnout with 82.8% of the vote and 306,055 number of votes. 
 - The candidates were:
   - Charles Casper Stockham
   - Diana DeGette
@@ -29,5 +34,14 @@ The Analysis of the election show that:
   - Diana DeGette, who received 73.8% of the vote and 272,892 number of votes. 
   
 ## Challenge Overview 
+The election commission has requested additional data to complete the audit. 
+
+1. Calculate the voter turnout for each county. 
+2. Calculate the percentage of votes from each county out of the total count. 
+3. Determine the county with the highest turnout. 
+
 
 ## Challenge Summary 
+
+- 
+
